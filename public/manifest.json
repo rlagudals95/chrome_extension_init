@@ -15,10 +15,10 @@
   },
 
   "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/vendor.js", "js/content_script.js"]
+    }
   ],
 
   "background": {
@@ -26,10 +26,16 @@
   },
 
   "permissions": [
-    "storage"
+    "tabs",
+    "scripting",
+    "storage",
+    "activeTab",
+    "downloads",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
   ],
 
-  "host_permissions": [
-    "<all_urls>"
-  ]
+  "host_permissions": ["<all_urls>"]
 }

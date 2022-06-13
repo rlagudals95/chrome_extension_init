@@ -4,10 +4,3 @@ function polling() {
 }
 
 polling();
-
-const getBody = () => {
-  const bodyElement = document.querySelector("body");
-  console.log("bodyElement :", bodyElement);
-};
-
-getBody();

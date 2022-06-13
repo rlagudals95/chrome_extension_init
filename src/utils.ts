@@ -1,12 +1,15 @@
-// export const isStrictEqual = (value1) => (value2) => value1 === value2;
-// export const isNotStrictEqual = (value1) => (value2) => value1 !== value2;
+export const isStrictEqual = (value1: any) => (value2: any) =>
+  value1 === value2;
+export const isNotStrictEqual = (value1: any) => (value2: any) =>
+  value1 !== value2;
 
-// export const isIncludedIn = (array) => (item) => array.includes(item);
+export const isIncludedIn = (array: Array<any>) => (item: any) =>
+  array.includes(item);
 
-// export const stopPropagation = (e) => e.stopPropagation();
+export const stopPropagation = (e: Event) => e.stopPropagation();
 
-// export const removeSpecialCharacters = (value) => {
-//   return value.replace(/[<>:"|?*]/g, "");
-// };
+export const removeSpecialCharacters = (value: string) => {
+  return value.replace(/[<>:"|?*]/g, "");
+};
 
-// export const unique = (values: any) => [...new Set(values)];
+export const unique = (values: Array<any>) => [...new Set(values)];
