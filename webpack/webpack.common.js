@@ -7,9 +7,8 @@ module.exports = {
     entry: {
       popup: path.join(srcDir, './popup/popup.tsx'),
       options: path.join(srcDir, 'options.tsx'),
-      background: path.join(srcDir, 'background.ts'),
+      background: path.join(srcDir, '/background/background.ts'),
       content_script: path.join(srcDir, 'content_script.tsx'),
-      sendImage: path.join(srcDir, './popup/sendImage.ts'),
     },
     output: {
         path: path.join(__dirname, "../dist/js"),
@@ -30,6 +29,10 @@ module.exports = {
                 use: "ts-loader",
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+              },
         ],
     },
     resolve: {
